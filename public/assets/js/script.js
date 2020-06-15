@@ -18,6 +18,6 @@ form.addEventListener('submit', (e) => {
 
 function setMessage(message) {
     document.querySelector("#message").textContent = message
-    document.querySelector("#location").textContent = "----------"
-    document.querySelector("#temperature").textContent = "----------"
+    document.querySelector("#location").textContent = "---------"
+    document.querySelector("#temperature").textContent = "---------"
 }
