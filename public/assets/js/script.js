@@ -4,7 +4,7 @@ form.addEventListener('submit', (e) => {
     let location = e.target.location.value
     if (!location) return setMessage('enter a value please')
     setMessage('loading...')
-    fetch(`http://localhost:3000/weather?address=${location}`).then(response => {
+    fetch(`https://rafaelcm-weather-app.herokuapp.com/weather?address=${location}`).then(response => {
         response.json().then((data) => {
             if (data.error) setMessage(data.error)
             else {
