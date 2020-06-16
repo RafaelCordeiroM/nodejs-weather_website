@@ -5,6 +5,7 @@ const forecast = require('./utils/forecast')
 const hbs = require('hbs')
 
 const app = express()
+const port = process.env.PORT || 3000
     /**
      * Define paths for express config
      */
@@ -72,6 +73,4 @@ app.get('*', (req, res) => {
     res.render('404', { title: "page not found", author: "Rafael C. Martins" })
 })
 
-app.listen(3000, () => {
-    console.log('server is running')
-})
+app.listen(port, () => console.log(`server is running on port ${port}`))
