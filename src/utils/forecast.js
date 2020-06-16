@@ -4,7 +4,7 @@ const forecast = ({ lat: latitude, lon: longitude } = {}, callback) => {
     request({ url, json: true }, (error, { body }) => {
 
         if (error) callback("Unable to connect", undefined)
-        else if (body.error) callback('coordinates was not matched', undefined)
+        else if (body.error) callback('coordinates was not matched!', undefined)
         else callback(undefined, body)
 
     })
